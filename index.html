@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Photo Album - Custom CSS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    </head>
+<body>
+
+    <div id="app" class="app-container">
+        
+        <header class="main-header">
+            <h1>My Photo Album</h1>
+            <p>A modern, interactive gallery experience.</p>
+        </header>
+
+        <main>
+            <section id="uploader" class="uploader-section card">
+                <div class="section-intro">
+                    <h2>Contribute to the Gallery</h2>
+                    <p>
+                        This section allows you to add your own images to our collection. Simply choose a valid image file (JPG or PNG) from your device. The application will provide an instant preview and, upon uploading, add it to the gallery below. This interaction is simulated on the front-end to give you a feel for the real-time upload experience.
+                    </p>
+                </div>
+                <form id="uploadForm" class="upload-form">
+                    <input type="file" id="imageFile" class="file-input" accept="image/png, image/jpeg, image/jpg">
+                    <button type="submit" class="button button-primary">Upload Image</button>
+                </form>
+                <div id="uploadStatus" class="upload-status"></div>
+                <div id="imagePreview" class="image-preview-area"></div>
+            </section>
+
+            <section id="gallery" class="gallery-section">
+                 <div class="section-intro text-center">
+                    <h2>Image Gallery</h2>
+                    <p>
+                        Explore the collection of images below. The gallery is designed to handle both landscape and portrait photos gracefully, presenting them in a clean, consistent two-column grid. This view is dynamically generated and updated by JavaScript. Use the pagination controls at the bottom to browse through different pages of the album.
+                    </p>
+                </div>
+                <div id="gallery-container" class="gallery-grid-container">
+                    <div id="gallery-left" class="gallery-column">
+                        </div>
+                    <div id="gallery-right" class="gallery-column">
+                        </div>
+                </div>
+                 <div id="gallery-placeholder" class="gallery-placeholder hidden">
+                    <p>The gallery is currently empty.</p>
+                    <p>Upload an image to begin!</p>
+                </div>
+            </section>
+
+            <section id="pagination" class="pagination-section">
+                <nav class="pagination-nav" aria-label="Gallery pagination">
+                    <button id="prevButton" class="button button-secondary">Previous</button>
+                    <span id="pageInfo" class="page-info"></span>
+                    <button id="nextButton" class="button button-secondary">Next</button>
+                </nav>
+            </section>
+        </main>
+        
+        <footer class="main-footer">
+            <p>&copy; 2024 Interactive Photo Album. A Frontend Simulation.</p>
+        </footer>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
